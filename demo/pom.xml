@@ -30,6 +30,34 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+            	<groupId>io.fabric8</groupId>
+            	<artifactId>docker-maven-plugin</artifactId>
+            	<version>0.21.0</version>
+            	
+            	<configuration>
+	            	<dockerHost>http://127.0.0.1:2375</dockerHost>
+	            	<verbose>true</verbose>
+	            	
+	            	<authConfig>
+	            		<username></username>
+	            		<password></password>
+	            	</authConfig>
+	            	
+	            	<images>
+	            		<name>demo-app</name>
+	            		<build>
+	            			<dockerFileDir>${project.basedir}/src/main/docker/</dockerFileDir>
+	            			<assembly>
+	            				<descriptorRef>artifact</descriptorRef>
+	            			</assembly>
+	            			<tags>
+	            				<tag>latest</tag>
+	            			</tags>
+	            		</build>
+	            	</images>
+            	</configuration>
+            </plugin>
 			<plugin>
 			  <groupId>com.spotify</groupId>
 			  <artifactId>dockerfile-maven-plugin</artifactId>
