@@ -33,7 +33,7 @@
             <plugin>
             	<groupId>io.fabric8</groupId>
             	<artifactId>docker-maven-plugin</artifactId>
-            	<version>0.21.0</version>
+            	<version>0.26.0</version>
             	
             	<configuration>
 	            	<dockerHost>http://127.0.0.1:2375</dockerHost>
@@ -45,16 +45,18 @@
 	            	</authConfig>
 	            	
 	            	<images>
-	            		<name>demo-app</name>
-	            		<build>
-	            			<dockerFileDir>${project.basedir}/src/main/docker/</dockerFileDir>
-	            			<assembly>
-	            				<descriptorRef>artifact</descriptorRef>
-	            			</assembly>
-	            			<tags>
-	            				<tag>latest</tag>
-	            			</tags>
-	            		</build>
+	            		<image>
+		            		<name>demo-app</name>
+		            		<build>
+		            			<dockerFileDir>${project.basedir}/src/main/docker/</dockerFileDir>
+		            			<assembly>
+		            				<descriptorRef>artifact</descriptorRef>
+		            			</assembly>
+		            			<tags>
+		            				<tag>latest</tag>
+		            			</tags>
+		            		</build>
+	            		</image>
 	            	</images>
             	</configuration>
             </plugin>
