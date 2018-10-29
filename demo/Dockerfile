@@ -8,10 +8,10 @@ COPY . target/demo-app-0.1.0.jar /opt/spring-cloud/lib/
 
 RUN rm /usr/bin/java
 
-RUN sudo update-alternatives --config java
+RUN update-alternatives --config java
 
-ENTRYPOINT ["/usr/bin/java"]
+ENTRYPOINT ["java", "-jar", "/opt/spring-cloud/lib/demo-app-0.1.0.jar"]
 
-CMD ["/usr/bin/java", "-jar", "-Xrunjdwp:server=y,transport=dt_socket,suspend=n", "/opt/spring-cloud/lib/demo-app-0.1.0.jar"]
+CMD [""]
 
 EXPOSE 8888
