@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
+FROM alpine:latest
 MAINTAINER John Doe
 WORKDIR $HOME/springbootdemo/demo-repo/demo
 COPY . target/gs-spring-boot-0.1.0.jar /opt/spring-cloud/lib/
