@@ -11,8 +11,4 @@ export class CustomerService {
   getCustomers() {
     return this.http.get('http://192.168.56.101:8080/customers');
   }
-
-  getUsers() {
-    return this.http.get('https://reqres.in/api/users');
-  }
 }

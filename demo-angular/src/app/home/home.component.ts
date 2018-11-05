@@ -9,17 +9,12 @@ import { CustomerService } from '../customer.service';
 export class HomeComponent implements OnInit {
 
   customers: Object;
-  users: Object;
 
   constructor(private customerService: CustomerService) { }
 
   ngOnInit() { 
     this.customerService.getCustomers().subscribe(data => {
       this.customers = data
-      console.log(this.customers)
-    })
-    this.customerService.getUsers().subscribe(data => {
-      this.users = data
     })
   }
 }

@@ -1,15 +1,11 @@
 <h1>Customers</h1>
 <ul *ngIf="customers">
-  <li *ngFor="let customer of customers.data">
-    <p>{{ customer.firstName }} {{ customer.lastName }}</p>
+  <li *ngFor="let customer of customers">
+    {{ customer.firstName }} {{ customer.lastName }}<br>
+    {{ customer.phone }}
+    <button>Delete</button>
   </li>
 </ul>
 
-<h1>Users</h1>
-<ul *ngIf="users">
-    <li *ngFor="let user of users.data">
-      <img [src]="user.avatar">
-      <p>{{ user.first_name }} {{ user.last_name }}</p>
-    </li>
-</ul>
+
 

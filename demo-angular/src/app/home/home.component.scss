@@ -4,14 +4,14 @@ ul {
 
     li {
         background: rgb(238, 238, 238);
-        padding: 2em;
-        border-radius: 4px;
+        padding: 1em;
+        border-radius: 1px;
         margin-bottom: 7px;
         display: grid;
-        grid-template-columns: 60px auto;
-
+        grid-template-columns: 100px auto;
+        font-weight: bold;
         p {
-            font-weight: bold;
+            
             margin-left: 20px;
         }
 
@@ -20,4 +20,15 @@ ul {
             width: 100%;
         }
     }
+}
+
+button {
+    background-color: rgb(121, 121, 121);
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+    margin: 1px 1250px;
+    cursor: pointer;   
+    width: 140px; 
 }
