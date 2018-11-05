@@ -1,5 +1,15 @@
-<h1 [ngStyle]="{
-  'color': h1Style ? 'gray' : 'black',
-  'font-size': !h1Style ? '1em' : '2em'}">{{strText}}</h1>
+<h1>Customers</h1>
+<ul *ngIf="customers">
+  <li *ngFor="let customer of customers.data">
+    <p>{{ customer.firstName }} {{ customer.lastName }}</p>
+  </li>
+</ul>
 
-<button (click)="toggle()">Click Me</button>
+<h1>Users</h1>
+<ul *ngIf="users">
+    <li *ngFor="let user of users.data">
+      <img [src]="user.avatar">
+      <p>{{ user.first_name }} {{ user.last_name }}</p>
+    </li>
+</ul>
+

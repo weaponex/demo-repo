@@ -16,13 +16,13 @@ public class CustomerController {
 	private CustomerService customerService;
 	
 	@CrossOrigin(origins = "http://localhost:4200")
-	@RequestMapping("/customers")
+	@RequestMapping(value="/customers", produces="application/json")
 	public List<Customer> getCustomers() {
 		return customerService.getCustomers();
 	}
 	
 	@CrossOrigin(origins = "http://localhost:4200")
-	@RequestMapping("/customer/{id}")
+	@RequestMapping(value="/customer/{id}", produces="application/json")
 	public Customer getCustomer(@PathVariable String id) {
 		return customerService.getCustomer(id);
 	}
